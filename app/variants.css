@@ -1,0 +1,86 @@
+/* Identidade própria "heritage" — Seno Petri Advogados Associados.
+   Verde profundo + dourado (fiel à parede da recepção real), tipografia grande
+   em caixa alta, faixa ticker contínua, selo "desde 1994" e contadores animados. */
+
+.theme-heritage .sectionHead>span,
+.theme-heritage .manifest>span,
+.theme-heritage .aboutCopy>span,
+.theme-heritage .timeline .sectionHead>span{color:var(--gold-deep)}
+.theme-heritage .stats .sectionHead>span{color:var(--gold)}
+.theme-heritage .contact small{color:var(--gold)}
+
+/* Header */
+.theme-heritage header{border-bottom:1px solid #ffffff40}
+.theme-heritage header .brand span{color:white}
+
+/* Hero */
+.theme-heritage .hero{align-items:flex-end}
+.theme-heritage .veil{background:linear-gradient(100deg,color-mix(in srgb,var(--ink) 92%,transparent) 0%,color-mix(in srgb,var(--ink) 58%,transparent) 55%,#0002 100%),linear-gradient(0deg,#000a,transparent 42%)}
+
+/* "Desde 1994" seal — dashed ring spins continuously behind the year */
+.theme-heritage .seal{position:absolute;top:120px;right:6vw;z-index:2;width:130px;height:130px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;text-align:center}
+.theme-heritage .seal::before{content:'';position:absolute;inset:0;border:1px solid var(--gold);border-radius:50%;border-style:dashed;animation:sealSpin 28s linear infinite}
+.theme-heritage .sealYear{font-family:var(--font);font-size:28px;font-weight:600;letter-spacing:-.01em}
+.theme-heritage .seal small{display:block;font-size:10px;letter-spacing:.32em;margin-top:5px;color:var(--gold);font-weight:600}
+@keyframes sealSpin{to{transform:rotate(360deg)}}
+
+/* Continuous marquee ticker of practice areas */
+.theme-heritage .ticker{background:var(--gold);overflow:hidden;white-space:nowrap;position:relative;z-index:5;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.theme-heritage .tickerTrack{display:inline-flex;animation:tickerScroll 26s linear infinite;will-change:transform}
+.theme-heritage .tickerTrack span{font-family:var(--font);font-weight:700;text-transform:uppercase;font-size:clamp(18px,2.6vw,30px);letter-spacing:.03em;color:var(--ink);padding:20px 0;display:inline-block}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.theme-heritage .tickerTrack{animation:none}.theme-heritage .seal::before{animation:none}}
+
+/* Stats / animated counters */
+.theme-heritage .stats{background:var(--ink);color:white;padding:9vw 8vw 10vw}
+.theme-heritage .stats .sectionHead p{color:#ffffffa8}
+.theme-heritage .statGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:4vw;border-top:1px solid #ffffff33;padding-top:5vw}
+.theme-heritage .statItem{display:flex;flex-direction:column;gap:14px}
+.theme-heritage .statItem strong{font-family:var(--font);font-weight:600;font-size:clamp(52px,6.6vw,104px);line-height:1;color:var(--gold);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.theme-heritage .statItem small{font-size:13px;letter-spacing:.01em;color:#ffffffb2;max-width:280px;line-height:1.5}
+
+/* Manifest quote */
+.theme-heritage .manifest{padding:7vw 8vw;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);grid-template-columns:170px 1fr}
+
+/* Areas of practice — three numbered columns */
+.theme-heritage .areas{padding:0;background:var(--paper);color:var(--ink)}
+.theme-heritage .areas .sectionHead{padding:8vw;margin:0;border-bottom:2px solid var(--ink)}
+.theme-heritage .areas .sectionHead p,.theme-heritage .areaGrid p{color:#3d4a45}
+.theme-heritage .areaGrid{border:0;grid-template-columns:repeat(3,1fr);padding:0 8vw 8vw}
+.theme-heritage .areaGrid article{padding:50px 3vw;border-right:2px solid var(--ink);min-height:380px}
+.theme-heritage .areaGrid article:last-child{border-right:0}
+.theme-heritage .areaGrid i{color:var(--gold-deep);font-size:12px;letter-spacing:.08em}
+.theme-heritage .areaGrid h3{font-size:30px;text-transform:uppercase;margin-top:90px}
+.theme-heritage .areaGrid p{max-width:380px}
+.theme-heritage .areaGrid article>span{right:3vw;top:50px;color:var(--gold-deep)}
+
+/* About / office */
+.theme-heritage .aboutVisual img{filter:saturate(.85)}
+
+/* Timeline of milestones */
+.theme-heritage .timeline{padding:10vw 8vw;background:color-mix(in srgb,var(--soft) 40%,var(--paper))}
+.theme-heritage .timeline .sectionHead{grid-template-columns:1fr 3fr}
+.theme-heritage .timelineList{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5vw;border-top:2px solid var(--ink)}
+.theme-heritage .timelineList article{padding:40px 3vw 10px 0;border-right:1px solid var(--soft)}
+.theme-heritage .timelineList article:last-child{border-right:0}
+.theme-heritage .timelineList b{display:block;color:var(--gold-deep);font-family:var(--font);font-size:13px;letter-spacing:.06em}
+.theme-heritage .timelineList h3{font-family:var(--font);font-size:26px;margin:20px 0 10px;text-transform:uppercase;font-weight:500}
+.theme-heritage .timelineList p{line-height:1.6;color:#3d4a45;font-size:14px;margin:0}
+
+@media(max-width:760px){
+  .theme-heritage .hero{padding:8rem 7vw 7rem;color:white;background:var(--ink)}
+  .theme-heritage .seal{top:auto;bottom:24vw;right:7vw;width:96px;height:96px}
+  .theme-heritage .sealYear{font-size:21px}
+  .theme-heritage .tickerTrack span{font-size:16px;padding:14px 0}
+  .theme-heritage .statGrid{grid-template-columns:1fr;gap:36px}
+  .theme-heritage .manifest{grid-template-columns:1fr;padding:22vw 7vw}
+  .theme-heritage .areas .sectionHead{padding:22vw 7vw}
+  .theme-heritage .areaGrid{grid-template-columns:1fr;padding:0 7vw 16vw}
+  .theme-heritage .areaGrid article{border-right:0!important;border-bottom:2px solid var(--ink);padding:36px 0}
+  .theme-heritage .areaGrid h3{margin-top:20px}
+  .theme-heritage .timeline{padding:22vw 7vw}
+  .theme-heritage .timelineList{grid-template-columns:1fr}
+  .theme-heritage .timelineList article{border-right:0!important;border-bottom:1px solid var(--soft);padding:28px 0}
+}
+
+@media(prefers-reduced-motion:reduce){.reveal,.seen{opacity:1;transform:none;transition:none}}
