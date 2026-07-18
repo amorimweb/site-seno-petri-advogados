@@ -17,6 +17,13 @@
 .theme-heritage .hero{align-items:flex-end}
 .theme-heritage .veil{background:linear-gradient(100deg,color-mix(in srgb,var(--ink) 92%,transparent) 0%,color-mix(in srgb,var(--ink) 58%,transparent) 55%,#0002 100%),linear-gradient(0deg,#000a,transparent 42%)}
 
+/* Serif accent for "legacy" moments — Manrope alone read as a modern tech
+   grotesk, which fought the "30+ anos de tradição" story. Playfair Display
+   carries the headline weight now; Manrope stays for nav, ticker, numbers. */
+.theme-heritage .hero h1{font-family:'Playfair Display',serif;font-weight:600;font-style:italic;text-transform:none;letter-spacing:-.01em}
+.theme-heritage .manifest blockquote{font-family:'Playfair Display',serif;font-weight:500;font-style:italic;text-transform:none;letter-spacing:-.01em}
+.theme-heritage .sectionHead h2,.theme-heritage .aboutCopy h2,.theme-heritage .contact h2{font-family:'Playfair Display',serif;font-weight:600;text-transform:none;letter-spacing:-.01em}
+
 /* "Desde 1994" seal — dashed ring spins continuously behind the year */
 .theme-heritage .seal{position:absolute;top:120px;right:6vw;z-index:2;width:130px;height:130px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;text-align:center}
 .theme-heritage .seal::before{content:'';position:absolute;inset:0;border:1px solid var(--gold);border-radius:50%;border-style:dashed;animation:sealSpin 28s linear infinite}
@@ -50,7 +57,7 @@
 .theme-heritage .areaGrid article{padding:50px 3vw;border-right:2px solid var(--ink);min-height:380px}
 .theme-heritage .areaGrid article:last-child{border-right:0}
 .theme-heritage .areaGrid i{color:var(--gold-deep);font-size:12px;letter-spacing:.08em}
-.theme-heritage .areaGrid h3{font-size:30px;text-transform:uppercase;margin-top:90px}
+.theme-heritage .areaGrid h3{font-family:'Playfair Display',serif;font-weight:600;font-size:32px;text-transform:none;margin-top:90px}
 .theme-heritage .areaGrid p{max-width:380px}
 .theme-heritage .areaGrid article>span{right:3vw;top:50px;color:var(--gold-deep)}
 
@@ -64,7 +71,7 @@
 .theme-heritage .timelineList article{padding:40px 3vw 10px 0;border-right:1px solid var(--soft)}
 .theme-heritage .timelineList article:last-child{border-right:0}
 .theme-heritage .timelineList b{display:block;color:var(--gold-deep);font-family:var(--font);font-size:13px;letter-spacing:.06em}
-.theme-heritage .timelineList h3{font-family:var(--font);font-size:26px;margin:20px 0 10px;text-transform:uppercase;font-weight:500}
+.theme-heritage .timelineList h3{font-family:'Playfair Display',serif;font-size:26px;margin:20px 0 10px;text-transform:none;font-weight:600}
 .theme-heritage .timelineList p{line-height:1.6;color:#3d4a45;font-size:14px;margin:0}
 
 @media(max-width:760px){

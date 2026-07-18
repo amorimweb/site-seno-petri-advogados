@@ -11,3 +11,5 @@ dist/
 .cursor/
 .gemini/
 .impeccable/
+
+.vercel
