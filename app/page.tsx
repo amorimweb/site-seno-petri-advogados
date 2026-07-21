@@ -74,7 +74,7 @@ export default function Page() {
       </header>
 
       <section className="hero" id="inicio">
-        <img src={site.image} alt="Fachada do escritório Seno Petri Advogados Associados" fetchPriority="high" />
+        <img src={site.image} alt="Recepção do escritório Seno Petri Advogados Associados" fetchPriority="high" />
         <div className="veil" />
         <div className="seal" aria-hidden="true">
           <span className="sealYear">{site.foundedYear}</span>
@@ -140,7 +140,7 @@ export default function Page() {
 
       <section className="about" id="escritorio">
         <div className="aboutVisual reveal">
-          <img src="/detail.png" alt="Recepção do escritório Seno Petri Advogados Associados" loading="lazy" decoding="async" />
+          <img src="/detail.png" alt="Fachada do escritório Seno Petri Advogados Associados" loading="lazy" decoding="async" />
           <div className="stamp">{site.monogram}<small>PARAUAPEBAS · PA</small></div>
         </div>
         <div className="aboutCopy reveal">
