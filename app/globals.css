@@ -46,6 +46,8 @@ nav a{opacity:.86}
 .areaGrid i{font-style:normal;font-size:11px}
 .areaGrid h3{font-family:var(--font);font-weight:500;margin:22px 0 14px}
 .areaGrid article>span{position:absolute}
+.areaTop{display:flex;align-items:center;gap:16px;color:var(--gold-deep)}
+.areaTop i{font-style:normal;font-size:11px}
 
 .about{display:grid;grid-template-columns:1.05fr .95fr;min-height:820px}
 .aboutVisual{position:relative;min-height:680px}
@@ -59,6 +61,28 @@ nav a{opacity:.86}
 .aboutCopy li{padding:14px 0;border-bottom:1px solid var(--soft);display:flex;gap:14px}
 .aboutCopy li b{color:var(--gold-deep)}
 
+.process{background:color-mix(in srgb,var(--soft) 42%,var(--paper));padding:10vw 8vw}
+.process .sectionHead{grid-template-columns:1fr 3fr}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:6vw;border-top:1px solid var(--ink)}
+.steps article{padding:42px 4vw 20px 0;border-right:1px solid var(--soft)}
+.steps article+article{padding-left:4vw}
+.steps b{color:var(--gold-deep)}
+.steps h3{font-family:var(--font);font-size:34px;margin:45px 0 12px}
+.steps p{line-height:1.7;color:#3d4a45}
+
+.faq{padding:9vw 8vw;background:var(--paper);color:var(--ink)}
+.faqList{max-width:900px;margin-top:2vw;border-top:1px solid var(--soft)}
+.faqList details{border-bottom:1px solid var(--soft);padding:26px 0}
+.faqList summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-family:var(--font);font-size:20px;font-weight:500;list-style:none}
+.faqList summary::-webkit-details-marker{display:none}
+.faqList summary span{font-size:22px;color:var(--gold-deep);transition:transform .25s ease;flex:none}
+.faqList details[open] summary span{transform:rotate(45deg)}
+.faqList p{margin:16px 0 0;color:#00000099;line-height:1.75;max-width:720px}
+
+.ctaBand{background:var(--ink);color:#fff;padding:7vw 8vw;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.ctaBand h2{font-family:var(--font);font-weight:500;font-size:clamp(28px,3.4vw,44px);line-height:1.15;margin:0;letter-spacing:-.02em;max-width:640px}
+.ctaBand .primary{flex:none}
+
 .contact{background:var(--ink);color:white;padding:10vw 8vw;display:grid;grid-template-columns:1.25fr .75fr;gap:10vw}
 .contact h2{font-size:clamp(48px,7vw,96px);margin:22px 0}
 .contactTitle p{color:#ffffffa7;max-width:500px;line-height:1.7}
@@ -68,7 +92,15 @@ nav a{opacity:.86}
 .contactInfo p{line-height:1.55}
 .contactInfo a{color:var(--gold);font-size:13px}
 
-footer{background:var(--ink);color:#ffffffa7;border-top:1px solid #ffffff25;padding:35px 4vw;display:flex;align-items:center;justify-content:space-between;gap:30px;font-size:11px}
+footer{background:var(--ink);color:#ffffffa7;border-top:1px solid #ffffff25;padding:60px 4vw 35px;font-size:11px}
+.footTop{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:6vw;padding-bottom:5vw}
+.footBrand p{margin:18px 0 0;max-width:340px;line-height:1.7;color:#ffffff8f}
+.footCol{display:flex;flex-direction:column;gap:13px}
+.footCol small{letter-spacing:.18em;font-size:10px;font-weight:600;color:var(--gold);margin-bottom:4px}
+.footCol a,.footCol span{color:#ffffffc0}
+.footCol a:hover{color:#fff}
+.footBottom{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding-top:28px;border-top:1px solid #ffffff25}
+.footBottom p{margin:0;max-width:480px;text-align:right;color:#ffffff70}
 .whatsapp{position:fixed;right:24px;bottom:24px;background:#1c9d58;color:white;padding:15px 20px;border-radius:100px;z-index:30;font-size:12px;font-weight:600;box-shadow:0 10px 30px #0003;min-height:44px;display:inline-flex;align-items:center}
 
 @media(max-width:760px){
@@ -89,6 +121,14 @@ footer{background:var(--ink);color:#ffffffa7;border-top:1px solid #ffffff25;padd
   .contact h2{font-size:52px}
   footer{align-items:flex-start;flex-direction:column}
   .scroll{display:none}
+  .process,.faq{padding:22vw 7vw}
+  .steps{grid-template-columns:1fr}
+  .steps article{border-right:0!important;border-bottom:1px solid var(--soft);padding:30px 0!important}
+  .steps article+article{padding-left:0}
+  .ctaBand{padding:16vw 7vw;text-align:center;justify-content:center}
+  .footTop{grid-template-columns:1fr;gap:36px}
+  .footBottom{flex-direction:column;align-items:flex-start;gap:14px}
+  .footBottom p{text-align:left}
 }
 
 @media(prefers-reduced-motion:reduce){

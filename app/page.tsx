@@ -1,8 +1,10 @@
 'use client';
 import { site } from './config';
+import { Icon } from './icons';
 import { useEffect, useRef, useState } from 'react';
 
 const Arrow = () => <span aria-hidden>↗</span>;
+const areaIcons = ['briefcase', 'document', 'shield'];
 
 export default function Page() {
   const [menu, setMenu] = useState(false);
@@ -68,6 +70,7 @@ export default function Page() {
           <a href="#atuacao" onClick={() => setMenu(false)}>Atuação</a>
           <a href="#numeros" onClick={() => setMenu(false)}>Números</a>
           <a href="#escritorio" onClick={() => setMenu(false)}>Escritório</a>
+          <a href="#faq" onClick={() => setMenu(false)}>Dúvidas</a>
           <a href="#contato" onClick={() => setMenu(false)}>Contato</a>
           <a className="navCta" href={wa}>Agendar <Arrow /></a>
         </nav>
@@ -129,7 +132,7 @@ export default function Page() {
         <div className="areaGrid">
           {site.areas.map((a, i) => (
             <article className="reveal" key={a[0]}>
-              <i>0{i + 1}</i>
+              <div className="areaTop"><Icon name={areaIcons[i] ?? 'document'} /><i>0{i + 1}</i></div>
               <h3>{a[0]}</h3>
               <p>{a[1]}</p>
               <Arrow />
@@ -172,9 +175,41 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="process">
+        <div className="sectionHead reveal">
+          <span>06 · COMO TRABALHAMOS</span>
+          <h2>Estratégia começa<br />por entender.</h2>
+        </div>
+        <div className="steps">
+          <article><b>01</b><h3>Escuta</h3><p>Compreensão do contexto, documentos e prioridades apresentadas pelo cliente.</p></article>
+          <article><b>02</b><h3>Análise</h3><p>Leitura técnica do caso e apresentação clara dos caminhos jurídicos possíveis.</p></article>
+          <article><b>03</b><h3>Condução</h3><p>Acompanhamento responsável e comunicação constante ao longo de todo o trabalho.</p></article>
+        </div>
+      </section>
+
+      <section className="faq" id="faq">
+        <div className="sectionHead reveal">
+          <span>07 · PERGUNTAS FREQUENTES</span>
+          <h2>Dúvidas comuns<br />antes de começar.</h2>
+        </div>
+        <div className="faqList reveal">
+          {site.faq.map(([q, a]) => (
+            <details key={q}>
+              <summary>{q}<span aria-hidden>+</span></summary>
+              <p>{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="ctaBand reveal">
+        <h2>Sua próxima decisão jurídica<br />merece atenção estratégica.</h2>
+        <a className="primary light" href={wa}>{cta} <Arrow /></a>
+      </section>
+
       <section className="contact" id="contato">
         <div className="contactTitle reveal">
-          <small>06 · CONTATO</small>
+          <small>08 · CONTATO</small>
           <h2>Vamos conversar?</h2>
           <p>Agende uma conversa inicial para apresentar sua demanda ao escritório.</p>
           <a className="primary light" href={wa}>{cta} <Arrow /></a>
@@ -203,12 +238,34 @@ export default function Page() {
       </section>
 
       <footer>
-        <div className="brand">
-          <img src="/logo.jpg" alt={site.name} className="brandLogo" />
-          <span>{site.short}</span>
+        <div className="footTop">
+          <div className="footBrand">
+            <div className="brand">
+              <img src="/logo.jpg" alt={site.name} className="brandLogo" />
+              <span>{site.short}</span>
+            </div>
+            <p>{site.about}</p>
+          </div>
+          <div className="footCol">
+            <small>NAVEGUE</small>
+            <a href="#numeros">Números</a>
+            <a href="#atuacao">Atuação</a>
+            <a href="#escritorio">Escritório</a>
+            <a href="#faq">Dúvidas</a>
+            <a href="#contato">Contato</a>
+          </div>
+          <div className="footCol">
+            <small>ATENDIMENTO</small>
+            <span>{site.address}</span>
+            <a href={`tel:+${site.whatsapp}`}>{site.phone}</a>
+            {site.instagram && <a href={site.instagram}>Instagram</a>}
+            <a href={wa}>WhatsApp</a>
+          </div>
         </div>
-        <p>Conteúdo informativo. Cada situação jurídica exige análise individual.</p>
-        <span>© 2026 {site.short} · Desde {site.foundedYear}</span>
+        <div className="footBottom">
+          <span>© 2026 {site.short} · Desde {site.foundedYear}</span>
+          <p>Conteúdo informativo. Cada situação jurídica exige análise individual e não substitui aconselhamento jurídico específico.</p>
+        </div>
       </footer>
       <a className="whatsapp" href={wa} aria-label="Falar pelo WhatsApp">WhatsApp</a>
     </main>

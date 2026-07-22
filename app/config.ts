@@ -51,4 +51,22 @@ export const site = {
     'Parte do Tax Group, com suporte tributário ampliado',
     'Presença em Parauapebas e Canaã dos Carajás',
   ],
+  faq: [
+    [
+      'Como faço para agendar uma conversa com o escritório?',
+      'Envie uma mensagem pelo WhatsApp descrevendo brevemente sua situação. A partir do contato inicial, é possível organizar um horário para tratar o caso com mais atenção.',
+    ],
+    [
+      'Quais documentos ajudam na primeira análise?',
+      'Contratos, notificações, comprovantes e qualquer documento relacionado ao caso. Quanto mais completo o histórico apresentado, mais precisa é a orientação inicial.',
+    ],
+    [
+      'O escritório atende apenas Parauapebas?',
+      'A atuação principal é em Parauapebas, com uma unidade também em Canaã dos Carajás, acompanhando o crescimento da região.',
+    ],
+    [
+      'O escritório atua apenas com Direito do Trabalho?',
+      'Não. Além do Direito Trabalhista, a Seno Petri Advogados Associados atua em Direito Civil, Previdenciário e conta com suporte tributário por meio do Tax Group.',
+    ],
+  ] as [string, string][],
 };
