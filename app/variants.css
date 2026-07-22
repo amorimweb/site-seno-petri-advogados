@@ -49,17 +49,19 @@
 /* Manifest quote */
 .theme-heritage .manifest{padding:7vw 8vw;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);grid-template-columns:170px 1fr}
 
-/* Areas of practice — three numbered columns */
-.theme-heritage .areas{padding:0;background:var(--paper);color:var(--ink)}
-.theme-heritage .areas .sectionHead{padding:8vw;margin:0;border-bottom:2px solid var(--ink)}
-.theme-heritage .areas .sectionHead p,.theme-heritage .areaGrid p{color:#3d4a45}
-.theme-heritage .areaGrid{border:0;grid-template-columns:repeat(3,1fr);padding:0 8vw 8vw}
-.theme-heritage .areaGrid article{padding:50px 3vw;border-right:2px solid var(--ink);min-height:380px}
-.theme-heritage .areaGrid article:last-child{border-right:0}
-.theme-heritage .areaGrid i{color:var(--gold-deep);font-size:12px;letter-spacing:.08em}
-.theme-heritage .areaGrid h3{font-family:'Playfair Display',serif;font-weight:600;font-size:32px;text-transform:none;margin-top:90px}
-.theme-heritage .areaGrid p{max-width:380px}
-.theme-heritage .areaGrid article>span{right:3vw;top:50px;color:var(--gold-deep)}
+/* Areas of practice — dark editorial index, each row a direct line to WhatsApp */
+.theme-heritage .areas{padding:9vw 8vw;background:var(--ink);color:#fff}
+.theme-heritage .areas .sectionHead{border-bottom:1px solid #ffffff33;padding-bottom:5vw}
+.theme-heritage .areas .sectionHead p{color:#ffffffa8}
+.theme-heritage .areaIndex{border-top:1px solid #ffffff33;margin-top:5vw}
+.theme-heritage .areaRow{border-bottom:1px solid #ffffff26;transition:background .35s ease}
+.theme-heritage .areaRow:hover{background:#ffffff0c}
+.theme-heritage .areaNum{color:var(--gold)}
+.theme-heritage .areaRow svg{color:var(--gold-deep);transition:transform .35s ease}
+.theme-heritage .areaRow:hover svg{transform:scale(1.15)}
+.theme-heritage .areaBody h3{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(24px,2.6vw,38px);text-transform:none;letter-spacing:-.01em;color:#fff}
+.theme-heritage .areaBody p{color:#ffffffa0;font-size:15px}
+.theme-heritage .areaGo{color:var(--gold)}
 
 /* About / office */
 .theme-heritage .aboutVisual img{filter:saturate(.85)}
@@ -88,10 +90,10 @@
   .theme-heritage .tickerTrack span{font-size:16px;padding:14px 0}
   .theme-heritage .statGrid{grid-template-columns:1fr;gap:36px}
   .theme-heritage .manifest{grid-template-columns:1fr;padding:22vw 7vw}
-  .theme-heritage .areas .sectionHead{padding:22vw 7vw}
-  .theme-heritage .areaGrid{grid-template-columns:1fr;padding:0 7vw 16vw}
-  .theme-heritage .areaGrid article{border-right:0!important;border-bottom:2px solid var(--ink);padding:36px 0}
-  .theme-heritage .areaGrid h3{margin-top:20px}
+  .theme-heritage .areas{padding:22vw 7vw}
+  .theme-heritage .areaRow{flex-wrap:wrap;row-gap:14px;padding:28px 0}
+  .theme-heritage .areaBody{flex-basis:100%}
+  .theme-heritage .areaGo{display:none}
   .theme-heritage .timeline{padding:22vw 7vw}
   .theme-heritage .timelineList{grid-template-columns:1fr}
   .theme-heritage .timelineList article{border-right:0!important;border-bottom:1px solid var(--soft);padding:28px 0}

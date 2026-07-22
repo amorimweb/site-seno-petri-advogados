@@ -129,14 +129,17 @@ export default function Page() {
           <h2>Direito explicado<br />com clareza.</h2>
           <p>Cada demanda começa com escuta atenta, análise responsável e orientação objetiva sobre os caminhos possíveis.</p>
         </div>
-        <div className="areaGrid">
+        <div className="areaIndex">
           {site.areas.map((a, i) => (
-            <article className="reveal" key={a[0]}>
-              <div className="areaTop"><Icon name={areaIcons[i] ?? 'document'} /><i>0{i + 1}</i></div>
-              <h3>{a[0]}</h3>
-              <p>{a[1]}</p>
-              <Arrow />
-            </article>
+            <a className="areaRow reveal" href={wa} key={a[0]}>
+              <span className="areaNum">0{i + 1}</span>
+              <Icon name={areaIcons[i] ?? 'document'} />
+              <div className="areaBody">
+                <h3>{a[0]}</h3>
+                <p>{a[1]}</p>
+              </div>
+              <span className="areaGo"><Arrow /></span>
+            </a>
           ))}
         </div>
       </section>
